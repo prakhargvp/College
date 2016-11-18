@@ -6,8 +6,8 @@ int main(){
 	int T,N,P,temp,count,i,j;
 	FILE *fin,*fout;
 	// Input
-	fin = fopen("input.txt","r",stdin);
-	fout = fopen("output.txt","w",stdout);
+	fin = fopen("input.txt","r");
+	fout = fopen("output.txt","w");
 	if(fin==NULL || fout==NULL){
 		printf("file not found");
 		return 0;

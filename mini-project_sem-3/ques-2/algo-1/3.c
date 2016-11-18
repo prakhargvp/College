@@ -4,13 +4,18 @@ int primeNo(long int,long int);
 int main(){
 	long int i,T,N,M,pnum;	
 	float prob;
-	scanf("%ld",&T);
+	FILE  *fin,*fout;
+	fin = fopen("input.txt","r");
+	fout = fopen("output.txt","w");
+	fscanf(fin,"%ld",&T);
 	for(i=0;i<T;i++){
-		scanf("%ld%ld",&N,&M);
+		fscanf(fin,"%ld%ld",&N,&M);
 		pnum = primeNo(N,M);
 		prob = (float)pnum/(M-N+1);
-		printf("%.2f\n",prob);
+		fprintf(fout,"%.2f\n",prob);
 	}
+	fclose(fin);
+	fclose(fout);
 return 0;
 }
 int primeNo(long int N,long int M){
