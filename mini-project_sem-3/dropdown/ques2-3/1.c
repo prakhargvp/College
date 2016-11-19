@@ -13,7 +13,7 @@ int ques1(){
 		scanf("%ld%ld",&N,&M);
 		pnum = arr[M]-arr[N];
 		prob = (float)pnum/(M-N+1);
-		printf("%.2f\n",prob);
+		printf("%.6f\n",prob);
 	}
 return 0;
 }
