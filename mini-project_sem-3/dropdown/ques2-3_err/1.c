@@ -8,9 +8,10 @@ int ques1(){
 	arr = (int*)malloc(PRIME_MAX*sizeof(int));	
 	memset(arr,0,PRIME_MAX*sizeof(int));
 	primeNo(arr);
-	scanf("%ld",&T);
+	scan("%ld",&T);
 	for(i=0;i<T;i++){
-		scanf("%ld%ld",&N,&M);
+		scan("%ld",&N);
+		scan("%ld",&M);
 		pnum = arr[M]-arr[N];
 		prob = (float)pnum/(M-N+1);
 		printf("%.6f\n",prob);

@@ -14,8 +14,9 @@ int checkChar(char ch){
 }
 int scan(char fspe[],void *add){
 	char temp[120];
-	int i,chk,alp,num,spcl,flag;
+	int i,chk,alp,num,spcl,flag,count=0;
 	do{	
+		count++;
 		flag=1;
 		alp=num=spcl=0;
 		strcpy(temp,"");	
@@ -31,38 +32,31 @@ int scan(char fspe[],void *add){
 			}
 		}
 		// For intercept access modifiers
+
+		//printf("Input : %s , count : %d , Reinput COunt : %d \n",temp,count,REINPUT_MAX);
+		//printf("length : %d \n",strlen(temp));
 		if((alp==0 && spcl==0) && (
 		    strstr(fspe,"d")!=NULL || (strstr(fspe,"l")!=NULL && strstr(fspe,"u")!=NULL) || 
 		    strstr(fspe,"%u")!=NULL)
 		   ){
-			*(int*)add = atoi(temp);
+			if(num<=INTMAX){
+				*(int*)add = atoi(temp);
+			}else{
+				printf("Not in Range ( Input > %d digits)\n",INTMAX);
+				flag=0;
+				printf("Re-Enter Value : ");
+			}
 		}else if(strlen(temp)==1 && strstr(fspe,"%c")!=NULL){
 			*(char*)add = temp[0];
 		}else if(strstr(fspe,"%s")!=NULL){
 			strcpy((char*)add,temp);
 		}else{
 			flag=0;
-			printf("Alphabets : %d ; Digits : %d ; Special Characters : %d \n",alp,num,spcl);
+			printf(" Not Valid Input : %s \n",temp);
+			printf(" Alphabets : %d ; Digits : %d ; Special Characters : %d \n",alp,num,spcl);
 			printf("Re-Enter Value : ");
 		}
 		getchar();
-	}while(strlen(temp)==0 || flag==0);
+	}while(count<REINPUT_MAX && ( strlen(temp)==0 || flag==0 ));
 return 0;
 }
-/*
-int main(){
-	int T;
-	char ch , str[40];
-	printf("Enter test cases : ");
-	scan("%d",&T);
-	printf("Enter name : ");
-	scan("%s",str);
-	printf("Enter character : ");
-	scan("%c",&ch);
-
-	printf("Test case value : %d\n",T);
-	printf("Name : %s\n",str);
-	printf("Character : %c\n",ch);
-return 0;
-}
-*/
