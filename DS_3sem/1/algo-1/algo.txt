@@ -1,0 +1,23 @@
+Assumption : We have a static array , say STACK of size MAX where MAX is a constant. Initially stack is empty. So initialise TOP by -1.
+
+Algorithm for push 
+step-1 : START
+step-2 : If TOP = MAX - 1, then Output "The Stack is in overflow condition" goto step 5
+step-3 : Set TOP = TOP + 1
+step-4 : Set STACK[TOP] = ITEM
+step-5 : STOP
+
+Algorithm for pop
+step-1 : START
+step-2 : If TOP = -1, then Output "The Stack is empty" goto step 4
+step-3 : Set TOP = TOP - 1
+step-4 : STOP
+
+Algorithm for display/traverse
+step-1 : START
+step-2 : If TOP = -1, then Output "The Stack is empty" goto step 7
+step-3 : Set i = 0
+step-4 : Repeat step 5,6 until i <= TOP 
+step-5 : Output STACK[i] 
+step-6 : Set i = i + 1
+step-7 : STOP 
