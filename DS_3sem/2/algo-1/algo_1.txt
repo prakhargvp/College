@@ -1,0 +1,23 @@
+Assumption : We have a static array , say STACK of size MAX where MAX is a constant. Initially stack is empty. So initialise TOP by -1.
+
+Algorithm for push 
+step-1 : START
+step-2 : If TOP is equal to MAX - 1, then Output "The Stack is in overflow condition" goto step 5
+step-3 : Increment TOP by 1
+step-4 : Adds data element to the STACK location, where TOP is pointing 
+step-5 : STOP
+
+Algorithm for pop
+step-1 : START
+step-2 : If TOP is equals to -1, then Output "The Stack is empty" goto step 4
+step-3 : Decrement TOP by 1
+step-4 : STOP
+
+Algorithm for display/traverse
+step-1 : START
+step-2 : If TOP is equals to -1, then Output "The Stack is empty" goto step 7
+step-3 : Set i to 0
+step-4 : Repeat step 5,6 until i is less than equal to TOP 
+step-5 : Output STACK Element at ith position
+step-6 : Increment i by 1
+step-7 : STOP 

@@ -1,0 +1,18 @@
+Enter the Choice : 1.Push 2.Pop 3.Display 4.Exit : 3
+Stack is Empty
+Enter the Choice : 1.Push 2.Pop 3.Display 4.Exit : 1
+Enter Element : 10
+Enter the Choice : 1.Push 2.Pop 3.Display 4.Exit : 1
+Enter Element : 20
+Enter the Choice : 1.Push 2.Pop 3.Display 4.Exit : 3
+10 20 
+Enter the Choice : 1.Push 2.Pop 3.Display 4.Exit : 1
+Enter Element : 30
+Enter the Choice : 1.Push 2.Pop 3.Display 4.Exit : 3
+10 20 30 
+Enter the Choice : 1.Push 2.Pop 3.Display 4.Exit : 2
+Poped Element is 30
+Enter the Choice : 1.Push 2.Pop 3.Display 4.Exit : 3
+10 20 
+Enter the Choice : 1.Push 2.Pop 3.Display 4.Exit : 4
+EXIT
