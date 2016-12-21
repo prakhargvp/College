@@ -7,12 +7,12 @@ typedef struct node{
 	struct node *next;
 }ntype;
 // Function Prototype
-void push(ntype**,int);
-void pop(ntype**);
+void insert(ntype**,ntype**,int);
+void serve(ntype**,ntype**);
 void display(ntype*);
 // Main Calling Function
 int main(){
-	ntype *START=NULL;
+	ntype *LEFT=NULL,*RIGHT=NULL;
 	int choice,ITEM;
 	do{
 		printf("Enter the Choice : 1.Push 2.Pop 3.Display 4.Exit : ");
@@ -21,10 +21,11 @@ int main(){
 		case 1: 
 			printf("Enter Element : ");
 			scanf("%d",&ITEM);	
-			push(&START,ITEM);
+			insert(&LEFT,&RIGHT,ITEM);
 		break;
-		case 2: pop(&START); break;
-		case 3: display(START);break;
+		case 2: serve(&LEFT,&RIGHT); 
+		break;
+		case 3: display(LEFT);break;
 		case 4: printf("EXIT\n");break;
 		default: printf("Wrong Choice\n");break;
 		}
@@ -32,7 +33,7 @@ int main(){
 return 0;
 }
 // Function Definition
-void push(ntype **START,int ITEM){
+void insert(ntype **LEFT,ntype **RIGHT,int ITEM){
 	ntype *PTR;
 	PTR = (ntype*)malloc(sizeof(ntype));
 	if(PTR==NULL){
@@ -40,18 +41,23 @@ void push(ntype **START,int ITEM){
 	}else{
 		PTR->info = ITEM;
 		PTR->next = NULL;
-		if(*START != NULL){
-			PTR->next=*START;
+		if(*RIGHT == NULL){
+			*LEFT=PTR;
+		}else{
+			(*RIGHT)->next=PTR;
 		}
-		*START=PTR;
+		*RIGHT=PTR;
 	}
 }
-void pop(ntype** START){
+void serve(ntype **LEFT,ntype **RIGHT){
 	ntype* TEMP;
-	TEMP = *START;
-	if( *START != NULL){
-		printf("Popped element is %d\n",(*START)->info);
-		*START = (*START)->next;
+	TEMP = *LEFT;
+	if(*LEFT != NULL){
+		printf("Popped element is %d\n",(*LEFT)->info);
+		*LEFT = (*LEFT)->next;
+		if(*LEFT==NULL){
+			*RIGHT = NULL;
+		}	
 		// Deallocated the memory
 		free(TEMP);
 	}

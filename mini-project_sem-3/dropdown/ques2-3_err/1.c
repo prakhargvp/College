@@ -12,9 +12,14 @@ int ques1(){
 	for(i=0;i<T;i++){
 		scan("%ld",&N);
 		scan("%ld",&M);
-		pnum = arr[M]-arr[N];
-		prob = (float)pnum/(M-N+1);
-		printf("%.6f\n",prob);
+		if(M>=N)
+		{
+			pnum = arr[M]-arr[N];
+			prob = (float)pnum/(M-N+1);
+			printf("%.6f\n",prob);
+		}else{
+			printf("Invalide Range : M Should be greater then N\n");
+		}
 	}
 return 0;
 }

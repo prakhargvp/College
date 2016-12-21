@@ -1,3 +1,3 @@
-[Question] : Implement Queue using Link-list with the help of Double Pointer.
+[Question] : Implement Stack using Link-list.
 [Algorithms]
 [Tags]

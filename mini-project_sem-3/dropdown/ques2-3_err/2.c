@@ -3,10 +3,10 @@
 int ques3(){
 	int T,*num,i,arr[20],len;
 	// Input
-	scanf("%d",&T);		
+	scan("%d",&T);		
 	num = (int*)malloc(T*sizeof(int));
 	for(i=0;i<T;i++){
-		scanf("%d",&num[i]);
+		scan("%d",&num[i]);
 	}
 	// output
 	for(i=0;i<T;i++){

@@ -1,9 +1,5 @@
- Not Valid Input : ihell 
- Alphabets : 5 ; Digits : 0 ; Special Characters : 0 
-Re-Enter Value :  Not Valid Input : //2 
- Alphabets : 0 ; Digits : 1 ; Special Characters : 2 
-Re-Enter Value : 0.247423
-0.101469
+Invalide Range : M Should be greater then N
+Invalide Range : M Should be greater then N
 0.000000
 0.000000
 0.000000

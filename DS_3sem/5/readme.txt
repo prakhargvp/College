@@ -1,3 +1,3 @@
-[Question] : Implement Stack using Link-list with the help of double pointer.
+[Question] : Implement Stack using Link-list.
 [Algorithms]
 [Tags]
