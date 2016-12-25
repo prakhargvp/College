@@ -1,3 +1,3 @@
-[Question] : To implement Stack using array.
+[Question] : To implement Queue using array.
 [Algorithms]
 [Tags]
